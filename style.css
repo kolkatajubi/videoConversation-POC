@@ -1,0 +1,71 @@
+.video_page {
+  position: relative;
+  float: left;
+}
+
+video {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  z-index: -1;
+}
+
+.btn {
+  position: relative;
+  float: left;
+}
+
+.btn .btn_playPause {
+  z-index: 1;
+  position: absolute;
+  left: 30px;
+  top: 160px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn .btn_expand {
+  position: absolute;
+  left: 330px;
+  top: 160px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn_expand .fullimg {
+  width: 20px;
+  padding: 3px;
+  outline: none;
+}
+
+.btn_playPause .playimg,
+.pauseimg {
+  width: 20px;
+  /* border: solid;
+  border-color: none; 
+ border-color: lightgrey; */
+  padding: 3px;
+  outline-style: none;
+}
+
+.btn_playPause .pauseimg {
+  display: none;
+}
+.btn1,
+.btn2 {
+  background: none;
+  color: white;
+  border: none;
+}
+#btn1 {
+  position: absolute;
+  left: 100px;
+}
+#btn2 {
+  position: absolute;
+  left: 160px;
+}
