@@ -30,7 +30,7 @@ $(document).ready(() => {
     var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
     // console.log(videoTime);
     if (status == 0)
-      if (videoTime == videoDuration - 2.0) {
+      if (videoTime >= videoDuration - 2.0) {
         status = 1;
         console.log("2secs left...");
         createButton();
