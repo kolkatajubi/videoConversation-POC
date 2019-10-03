@@ -35,7 +35,7 @@ $(document).ready(() => {
         console.log("2secs left...");
         createButton();
       }
-  }, 10);
+  }, 5);
 })();
 
 function createButton() {
