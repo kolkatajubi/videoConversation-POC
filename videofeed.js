@@ -42,8 +42,8 @@ $(document).ready(() => {
     contentType: "application/json",
     success: resp => {
       console.log("Ajax Success !!");
-      nextMapData = resp.data.nextMapData;
-      urlMapData = resp.data.urlMapData;
+      nextMapData = resp.nextMapData;
+      urlMapData = resp.urlMapData;
     },
     error: err => {
       console.log("Error");
