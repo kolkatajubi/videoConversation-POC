@@ -5,22 +5,9 @@ var videoID = "start";
 var currentNextNodes = [];
 var currentNextURLs = [];
 var status = 0;
+var fullscreen = 0;
 
 $(document).ready(() => {
-  var FS = document.getElementById("fs");
-  FS.addEventListener(
-    "click",
-    function() {
-      console.log("inside full screen...");
-      //var videoElement = document.getElementsByClassName("display");
-      document.body.requestFullscreen();
-      $(".display")
-        .width("100%")
-        .height("100%");
-    },
-    false
-  );
-
   $.ajax({
     url: "https://pixie.jubi.ai/videopoc/map",
     type: "get",
@@ -53,6 +40,13 @@ $(document).ready(() => {
 })();
 
 function playPause() {
+  if (fullscreen == 0) {
+    document.body.requestFullscreen();
+    fullscreen = 1;
+  }
+  $(".display")
+    .width("100%")
+    .height("100%");
   if (myVideo.paused) myVideo.play();
   else myVideo.pause();
 }
