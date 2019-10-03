@@ -60,19 +60,17 @@ function createButton() {
   getURLs(videoID);
   console.log("next nodes ....", currentNextNodes);
   console.log("next urls ....", currentNextURLs);
-  if (currentNextNodes.length > 1)
-    for (var i in currentNextNodes) {
-      $(".chat").append(
-        "<button id=" +
-          currentNextNodes[i] +
-          " onclick='changeSource(" +
-          i +
-          ");'>" +
-          currentNextNodes[i] +
-          "</button>"
-      );
-    }
-  else changeSource(0);
+  for (var i in currentNextNodes) {
+    $(".chat").append(
+      "<button id=" +
+        currentNextNodes[i] +
+        " onclick='changeSource(" +
+        i +
+        ");'>" +
+        currentNextNodes[i] +
+        "</button>"
+    );
+  }
 }
 
 function getURLs(current) {
