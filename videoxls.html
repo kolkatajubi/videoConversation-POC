@@ -15,7 +15,11 @@
         <video
           poster="https://pixie.jubi.ai/videopoc/thumbnail"
           id="myVideo"
-          onclick="this.play()?this.pause():this.play();"
+          onclick="function playPause() { 
+            if (myVideo.paused) 
+                myVideo.play(); 
+            else 
+                myVideo.pause(); }"
         >
           <source
             id="start"
