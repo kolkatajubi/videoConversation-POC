@@ -52,6 +52,11 @@ $(document).ready(() => {
   }, 5);
 })();
 
+function playPause() {
+  if (myVideo.paused) myVideo.play();
+  else myVideo.pause();
+}
+
 function createButton() {
   console.log("create button called...");
   // videoID = $("video#myVideo source").attr("id");
