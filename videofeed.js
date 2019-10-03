@@ -36,7 +36,7 @@ var status = 0;
 
 $(document).ready(() => {
   $.ajax({
-    url: "https://127.0.0.1:2020/map",
+    url: "https://pixie.jubi.ai/videopoc/map",
     type: "post",
     dataType: "json",
     contentType: "application/json",
