@@ -105,12 +105,12 @@ function changeSource(index) {
   status = 0;
 }
 
-function fullscreen() {
-  if ($(".display").requestFullscreen) {
-    $(".display").requestFullscreen();
-  } else if ($(".display").mozRequestFullScreen) {
-    $(".display").mozRequestFullScreen(); // Firefox
-  } else if ($(".display").webkitRequestFullscreen) {
-    $(".display").webkitRequestFullscreen(); // Chrome and Safari
-  }
-}
+var FS = document.getElementById("fs");
+FS.addEventListener(
+  "click",
+  function() {
+    var videoElement = document.getElementsByClassName("display");
+    videoElement.requestFullscreen();
+  },
+  false
+);
