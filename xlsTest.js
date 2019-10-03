@@ -11,24 +11,3 @@ var urlMapData = xl.utils.sheet_to_json(book.Sheets[urlMap]);
 console.log(nextMapData);
 console.log("===========================================================");
 console.log(urlMapData);
-
-// Reading the nextMap Next Field and getting the URL
-
-let current = "A";
-getURLs(current);
-function getURLs(current) {
-  for (i in nextMapData) {
-    if (nextMapData[i].Current === current) {
-      currentNextNodes = nextMapData[i].Next.split(", ");
-      console.log(currentNextNodes);
-      for (i in currentNextNodes) {
-        for (x in urlMapData) {
-          if (currentNextNodes[i] === urlMapData[x].Nodes) {
-            console.log(urlMapData[x].URL);
-          }
-        }
-      }
-      return;
-    }
-  }
-}
