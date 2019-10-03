@@ -1,31 +1,3 @@
-// var nextMapData = [
-//   { Current: "start", Next: "A, B" },
-//   { Current: "A", Next: "X, Y, Z" },
-//   { Current: "B", Next: "A, P, Q" },
-//   { Current: "X", Next: "P, Q, R, S" },
-//   { Current: "Y", Next: "A, X" },
-//   { Current: "Z", Next: "TY" },
-//   { Current: "P", Next: "TY" },
-//   { Current: "Q", Next: "TY" },
-//   { Current: "R", Next: "TY" },
-//   { Current: "S", Next: "TY" }
-// ];
-
-// var urlMapData = [
-//   { Nodes: "start", URL: "chunu.mp4" },
-//   { Nodes: "A", URL: "A10.mp4" },
-//   { Nodes: "B", URL: "B20.mp4" },
-//   { Nodes: "C", URL: "C10.mp4" },
-//   { Nodes: "X", URL: "E1.mp4" },
-//   { Nodes: "Y", URL: "E2.mp4" },
-//   { Nodes: "Z", URL: "E3.mp4" },
-//   { Nodes: "P", URL: "E4.mp4" },
-//   { Nodes: "Q", URL: "E5.mp4" },
-//   { Nodes: "R", URL: "E6.mp4" },
-//   { Nodes: "S", URL: "chunu.mp4" },
-//   { Nodes: "TY", URL: "TY.mp4" }
-// ];
-
 var nextMapData;
 var urlMapData;
 
@@ -63,7 +35,7 @@ $(document).ready(() => {
         console.log("2secs left...");
         createButton();
       }
-  }, 5);
+  }, 10);
 })();
 
 function createButton() {
