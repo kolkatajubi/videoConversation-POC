@@ -7,6 +7,17 @@ var currentNextURLs = [];
 var status = 0;
 
 $(document).ready(() => {
+  var FS = document.getElementById("fs");
+  FS.addEventListener(
+    "click",
+    function() {
+      console.log("inside full screen...");
+      //var videoElement = document.getElementsByClassName("display");
+      document.body.requestFullscreen();
+    },
+    false
+  );
+
   $.ajax({
     url: "https://pixie.jubi.ai/videopoc/map",
     type: "get",
@@ -104,14 +115,3 @@ function changeSource(index) {
   videoID = $("video#myVideo source").attr("id");
   status = 0;
 }
-
-var FS = document.getElementById("fs");
-FS.addEventListener(
-  "click",
-  function() {
-    console.log("inside full screen...");
-    //var videoElement = document.getElementsByClassName("display");
-    document.body.requestFullscreen();
-  },
-  false
-);
