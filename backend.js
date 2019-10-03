@@ -99,7 +99,7 @@ app.get("/r", (req, res) => {
 app.get("/s", (req, res) => {
   res.sendFile(__dirname + "/chunu.mp4");
 });
-app.get("/ty", (req, res) => {
+app.get("/end", (req, res) => {
   res.sendFile(__dirname + "/TY.mp4");
 });
 // --------------------------------------------------------------------------------------
