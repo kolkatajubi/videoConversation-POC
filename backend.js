@@ -55,7 +55,7 @@ console.log(urlMapData);
 //                            HOSTING FILES
 // --------------------------------------------------------------------------------------
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/videoxlsx.html");
+  res.sendFile(__dirname + "/videoxls.html");
 });
 app.get("/videofeed", (req, res) => {
   res.sendFile(__dirname + "/videofeed.js");
