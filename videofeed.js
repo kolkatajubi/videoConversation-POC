@@ -36,7 +36,7 @@ var status = 0;
 
 $(document).ready(() => {
   $.ajax({
-    url: "http://127.0.0.1:2020/map",
+    url: "https://127.0.0.1:2020/map",
     type: "post",
     dataType: "json",
     contentType: "application/json",
