@@ -41,7 +41,7 @@ button {
   cursor: pointer;
 }
 
-button:after {
+button::after {
   content: "";
   background: #90ee90;
   display: block;
