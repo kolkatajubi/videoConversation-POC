@@ -104,3 +104,13 @@ function changeSource(index) {
   videoID = $("video#myVideo source").attr("id");
   status = 0;
 }
+
+function fullscreen() {
+  if ($(".display").requestFullscreen) {
+    $(".display").requestFullscreen();
+  } else if ($(".display").mozRequestFullScreen) {
+    $(".display").mozRequestFullScreen(); // Firefox
+  } else if ($(".display").webkitRequestFullscreen) {
+    $(".display").webkitRequestFullscreen(); // Chrome and Safari
+  }
+}
