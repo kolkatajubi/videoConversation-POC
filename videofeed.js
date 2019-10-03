@@ -110,6 +110,7 @@ function changeSource(index) {
       currentNextURLs[index] +
       " />"
   );
+  $("#myVideo").attr("poster", "");
   var video = document.getElementById("myVideo");
   // video.src = currentNextURLs[index];
   video.load();
