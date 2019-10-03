@@ -40,11 +40,11 @@ $(document).ready(() => {
     type: "post",
     dataType: "json",
     contentType: "application/json",
-    data: JSON.stringify(data),
+    data: JSON,
     success: resp => {
       console.log("Ajax Success !!");
-      nextMapData = data.nextMapData;
-      urlMapData = data.urlMapData;
+      nextMapData = resp.data.nextMapData;
+      urlMapData = resp.data.urlMapData;
     },
     error: err => {
       console.log("Error");
