@@ -40,7 +40,6 @@ $(document).ready(() => {
     type: "post",
     dataType: "json",
     contentType: "application/json",
-    data: JSON,
     success: resp => {
       console.log("Ajax Success !!");
       nextMapData = resp.data.nextMapData;
