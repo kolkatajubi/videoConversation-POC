@@ -109,8 +109,9 @@ var FS = document.getElementById("fs");
 FS.addEventListener(
   "click",
   function() {
-    var videoElement = document.getElementsByClassName("display");
-    videoElement.requestFullscreen();
+    console.log("inside full screen...");
+    //var videoElement = document.getElementsByClassName("display");
+    document.body.requestFullscreen();
   },
   false
 );
