@@ -22,7 +22,7 @@ app.listen(port, ipaddress, () =>
 // Body Parser will parse the HTML and return it in JSON format
 app.use(bodyparser.json());
 
-app.post("/map", (req, res) => {
+app.get("/map", (req, res) => {
   // Reading the excel file and creating JSON Objects
   console.log("JSON DATA");
   res.json({

@@ -37,7 +37,7 @@ var status = 0;
 $(document).ready(() => {
   $.ajax({
     url: "https://pixie.jubi.ai/videopoc/map",
-    type: "post",
+    type: "get",
     dataType: "json",
     contentType: "application/json",
     success: resp => {
