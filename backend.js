@@ -57,6 +57,9 @@ console.log(urlMapData);
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/videoxls.html");
 });
+app.get("/thumbnail", (req, res) => {
+  res.sendFile(__dirname + "/thumbnail.jpg");
+});
 app.get("/videofeed", (req, res) => {
   res.sendFile(__dirname + "/videofeed.js");
 });

@@ -42,7 +42,7 @@ $(document).ready(() => {
     contentType: "application/json",
     data: JSON.stringify(data),
     success: resp => {
-      console.log("Request server resolved.....");
+      console.log("Ajax Success !!");
       nextMapData = data.nextMapData;
       urlMapData = data.urlMapData;
     },
