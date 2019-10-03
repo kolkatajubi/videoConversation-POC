@@ -14,6 +14,9 @@ $(document).ready(() => {
       console.log("inside full screen...");
       //var videoElement = document.getElementsByClassName("display");
       document.body.requestFullscreen();
+      $(".display")
+        .width("100%")
+        .height("100%");
     },
     false
   );
