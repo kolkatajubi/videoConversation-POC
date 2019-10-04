@@ -42,8 +42,13 @@ $(document).ready(() => {
 function playPause() {
   FS();
   console.log("play called fullscreen...");
-  if (myVideo.paused) myVideo.play();
-  else myVideo.pause();
+  if (myVideo.paused) {
+    myVideo.play();
+    document.getElementById("playpause").innerHTML = "PAUSE";
+  } else {
+    myVideo.pause();
+    document.getElementById("playpause").innerHTML = "PLAY";
+  }
 }
 
 function FS() {
@@ -57,7 +62,7 @@ function FS() {
     else if (document.body.msRequestFullscreen)
       document.body.msRequestFullscreen();
     fullscreen = 1;
-    document.getElementById("fs").innerHTML = "EXIT Fullscreen";
+    document.getElementById("fs").innerHTML = "EXIT FULLSCREEN";
     $(".display")
       .width("100%")
       .height("100%");
@@ -72,7 +77,7 @@ function exitFS() {
     else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     else if (document.msExitFullscreen) document.msExitFullscreen();
     fullscreen = 0;
-    document.getElementById("fs").innerHTML = "Fullscreen";
+    document.getElementById("fs").innerHTML = "FULLSCREEN";
     $(".display")
       .width(640)
       .height(360);
