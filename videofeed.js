@@ -36,7 +36,7 @@ $(document).ready(() => {
       !document.msFullscreenElement
     ) {
       fullscreen = 0;
-      document.getElementById("fs").innerHTML = "FULLSCREEN";
+      // document.getElementById("fs").innerHTML = "FULLSCREEN";
       $(".display")
         .width(640)
         .height(360);
