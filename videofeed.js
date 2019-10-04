@@ -24,7 +24,10 @@ $(document).ready(() => {
   });
   $(document).on("keydown", function(ev) {
     console.log(ev.keyCode);
-    if (ev.keyCode === 27 || ev.keyCode === 122) return false;
+    if (ev.keyCode === 27 || ev.keyCode === 122) {
+      exitFS();
+      return false;
+    }
   });
 });
 
