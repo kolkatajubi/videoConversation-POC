@@ -50,7 +50,7 @@ function playPause() {
 }
 
 function FS() {
-  console.log("fullscreen called...");
+  console.log("fullscreen called...", fullscreen);
   if (fullscreen == 0) {
     if (document.body.requestFullscreen) document.body.requestFullscreen();
     // else if (document.body.mozRequestFullScreen)
@@ -64,7 +64,7 @@ function FS() {
 }
 
 function exitFS() {
-  console.log("exit fullscreen called...");
+  console.log("exit fullscreen called...", fullscreen);
   if (fullscreen == 1) {
     if (document.body.exitFullscreen) document.body.exitFullscreen();
     // else if (document.body.mozCancelFullScreen)
@@ -77,7 +77,7 @@ function exitFS() {
 }
 
 function toggleFS() {
-  console.log("toggle fullscreen called...");
+  console.log("toggle fullscreen called...", fullscreen);
   if (fullscreen == 0) FS();
   else exitFS();
 }
