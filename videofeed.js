@@ -50,8 +50,7 @@ function playPause() {
 
 function FS() {
   if (fullscreen == 0) {
-    if (document.getElementsByClassName("display").requestFullscreen)
-      document.getElementsByClassName("display").requestFullscreen();
+    if (document.body.requestFullscreen) document.body.requestFullscreen();
     // else if (document.body.mozRequestFullScreen)
     //   document.body.mozrequestFullscreen();
     // else if (document.body.webkitRequestFullscreen)
