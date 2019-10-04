@@ -63,10 +63,12 @@ function playPause() {
   FS();
   console.log("play called fullscreen...");
   if (myVideo.paused) {
+    $("$playImg").hide();
     myVideo.play();
     // document.getElementById("playpause").innerHTML = "PAUSE";
   } else {
     myVideo.pause();
+    $("$playImg").show();
     // document.getElementById("playpause").innerHTML = "PLAY";
   }
 }
