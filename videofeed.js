@@ -40,7 +40,7 @@ $(document).ready(() => {
 })();
 
 function playPause() {
-  // FS();
+  FS();
   // $(".display")
   //   .width("100%")
   //   .height("100%");
