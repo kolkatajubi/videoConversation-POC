@@ -6,13 +6,6 @@
   width: 100%; */
 }
 
-.menu {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
 .video {
   position: absolute;
   height: 100%;
@@ -24,6 +17,13 @@
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+.menu {
+  top: 5%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 
 .chat {
