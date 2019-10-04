@@ -31,9 +31,6 @@ app.get("/map", (req, res) => {
     urlMapData: urlMapData
   });
 });
-// app.get("/", (req, res) => {
-//   // Reading the excel file and creating JSON Objects
-// });
 
 // ============================================================================= //
 
