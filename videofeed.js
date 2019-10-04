@@ -57,7 +57,8 @@ function FS() {
     else if (document.body.msRequestFullscreen)
       document.body.msRequestFullscreen();
     fullscreen = 1;
-    document.getElementById("fs").value = "EXIT Fullscreen";
+    var element = document.getElementById("fs");
+    element.value = "EXIT Fullscreen";
     $(".display")
       .width("100%")
       .height("100%");
@@ -72,7 +73,8 @@ function exitFS() {
     else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     else if (document.msExitFullscreen) document.msExitFullscreen();
     fullscreen = 0;
-    document.getElementById("fs").value = "Fullscreen";
+    var element = document.getElementById("fs");
+    element.value = "Fullscreen";
     $(".display")
       .width(640)
       .height(360);
