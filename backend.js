@@ -105,7 +105,7 @@ app.get("/s", (req, res) => {
 app.get("/end", (req, res) => {
   res.sendFile(__dirname + "/TY.mp4");
 });
-app.use(express.static(__dirname + "/video"));
+app.use(express.static(__dirname + "/videos"));
 // --------------------------------------------------------------------------------------
 //                            END OF HOSTING
 // --------------------------------------------------------------------------------------
