@@ -41,6 +41,7 @@ $(document).ready(() => {
 
 function playPause() {
   FS();
+  console.log("play called fullscreen...");
   // $(".display")
   //   .width("100%")
   //   .height("100%");
@@ -49,6 +50,7 @@ function playPause() {
 }
 
 function FS() {
+  console.log("fullscreen called...");
   if (fullscreen == 0) {
     if (document.body.requestFullscreen) document.body.requestFullscreen();
     // else if (document.body.mozRequestFullScreen)
@@ -62,6 +64,7 @@ function FS() {
 }
 
 function exitFS() {
+  console.log("exit fullscreen called...");
   if (fullscreen == 1) {
     if (document.getElementsByClassName("display").exitFullscreen)
       document.getElementsByClassName("display").exitFullscreen();
@@ -75,6 +78,7 @@ function exitFS() {
 }
 
 function toggleFS() {
+  console.log("toggle fullscreen called...");
   if (fullscreen == 0) FS();
   else exitFS();
 }
