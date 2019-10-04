@@ -60,6 +60,9 @@ app.get("/", (req, res) => {
 app.get("/thumbnail", (req, res) => {
   res.sendFile(__dirname + "/thumbnail.jpg");
 });
+app.get("/playImg", (req, res) => {
+  res.sendFile(__dirname + "/play.png");
+});
 app.get("/videofeed", (req, res) => {
   res.sendFile(__dirname + "/videofeed.js");
 });

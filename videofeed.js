@@ -22,13 +22,6 @@ $(document).ready(() => {
       console.log("Error");
     }
   });
-  // $(document).on("keydown", function(ev) {
-  //   console.log(ev.keyCode);
-  //   if (ev.keyCode === 27 || ev.keyCode === 122) {
-  //     exitFS();
-  //     return false;
-  //   }
-  // });
 
   document.addEventListener("fullscreenchange", exitHandler);
   document.addEventListener("webkitfullscreenchange", exitHandler);
@@ -71,10 +64,10 @@ function playPause() {
   console.log("play called fullscreen...");
   if (myVideo.paused) {
     myVideo.play();
-    document.getElementById("playpause").innerHTML = "PAUSE";
+    // document.getElementById("playpause").innerHTML = "PAUSE";
   } else {
     myVideo.pause();
-    document.getElementById("playpause").innerHTML = "PLAY";
+    // document.getElementById("playpause").innerHTML = "PLAY";
   }
 }
 
@@ -89,7 +82,7 @@ function FS() {
     else if (document.body.msRequestFullscreen)
       document.body.msRequestFullscreen();
     fullscreen = 1;
-    document.getElementById("fs").innerHTML = "EXIT FULLSCREEN";
+    // document.getElementById("fs").innerHTML = "EXIT FULLSCREEN";
     $(".display")
       .width("100%")
       .height("100%");
@@ -104,7 +97,7 @@ function exitFS() {
     else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     else if (document.msExitFullscreen) document.msExitFullscreen();
     fullscreen = 0;
-    document.getElementById("fs").innerHTML = "FULLSCREEN";
+    // document.getElementById("fs").innerHTML = "FULLSCREEN";
     $(".display")
       .width(640)
       .height(360);
