@@ -67,11 +67,9 @@ function exitFS() {
   console.log("exit fullscreen called...", fullscreen);
   if (fullscreen == 1) {
     if (document.exitFullscreen) document.exitFullscreen();
-    // else if (document.body.mozCancelFullScreen)
-    //   document.body.mozCancelFullScreen();
-    // else if (document.body.webkitExitFullscreen)
-    //   document.body.webkitExitFullscreen();
-    // else if (document.body.msExitFullscreen) document.body.msExitFullscreen();
+    else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+    else if (document.msExitFullscreen) document.msExitFullscreen();
     fullscreen = 0;
   }
 }
