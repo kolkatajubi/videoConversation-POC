@@ -66,8 +66,7 @@ function FS() {
 function exitFS() {
   console.log("exit fullscreen called...");
   if (fullscreen == 1) {
-    if (document.getElementsByClassName("display").exitFullscreen)
-      document.getElementsByClassName("display").exitFullscreen();
+    if (document.body.exitFullscreen) document.body.exitFullscreen();
     // else if (document.body.mozCancelFullScreen)
     //   document.body.mozCancelFullScreen();
     // else if (document.body.webkitExitFullscreen)
