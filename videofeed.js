@@ -53,12 +53,12 @@ function FS() {
   console.log("fullscreen called...", fullscreen);
   if (fullscreen == 0) {
     if (document.body.requestFullscreen) document.body.requestFullscreen();
-    // else if (document.body.mozRequestFullScreen)
-    //   document.body.mozrequestFullscreen();
-    // else if (document.body.webkitRequestFullscreen)
-    //   document.body.webkitRequestFullscreen();
-    // else if (document.body.msRequestFullscreen)
-    //   document.body.msRequestFullscreen();
+    else if (document.body.mozRequestFullScreen)
+      document.body.mozrequestFullscreen();
+    else if (document.body.webkitRequestFullscreen)
+      document.body.webkitRequestFullscreen();
+    else if (document.body.msRequestFullscreen)
+      document.body.msRequestFullscreen();
     fullscreen = 1;
   }
 }
@@ -66,7 +66,7 @@ function FS() {
 function exitFS() {
   console.log("exit fullscreen called...", fullscreen);
   if (fullscreen == 1) {
-    document.exitFullscreen();
+    if (document.exitFullscreen) document.exitFullscreen();
     // else if (document.body.mozCancelFullScreen)
     //   document.body.mozCancelFullScreen();
     // else if (document.body.webkitExitFullscreen)
