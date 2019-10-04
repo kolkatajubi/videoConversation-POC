@@ -22,13 +22,33 @@ $(document).ready(() => {
       console.log("Error");
     }
   });
-  $(document).on("keydown", function(ev) {
-    console.log(ev.keyCode);
-    if (ev.keyCode === 27 || ev.keyCode === 122) {
-      exitFS();
-      return false;
+  // $(document).on("keydown", function(ev) {
+  //   console.log(ev.keyCode);
+  //   if (ev.keyCode === 27 || ev.keyCode === 122) {
+  //     exitFS();
+  //     return false;
+  //   }
+  // });
+
+  document.addEventListener("fullscreenchange", exitHandler);
+  document.addEventListener("webkitfullscreenchange", exitHandler);
+  document.addEventListener("mozfullscreenchange", exitHandler);
+  document.addEventListener("MSFullscreenChange", exitHandler);
+
+  function exitHandler() {
+    if (
+      !document.fullscreenElement &&
+      !document.webkitIsFullScreen &&
+      !document.mozFullScreen &&
+      !document.msFullscreenElement
+    ) {
+      fullscreen = 0;
+      document.getElementById("fs").innerHTML = "FULLSCREEN";
+      $(".display")
+        .width(640)
+        .height(360);
     }
-  });
+  }
 });
 
 (() => {
