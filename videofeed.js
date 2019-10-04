@@ -68,7 +68,7 @@ function playPause() {
     // document.getElementById("playpause").innerHTML = "PAUSE";
   } else {
     myVideo.pause();
-    $("$playImg").show();
+    $("#playImg").show();
     // document.getElementById("playpause").innerHTML = "PLAY";
   }
 }
