@@ -1,7 +1,16 @@
 .display {
   position: relative;
-  height: 360px;
-  width: 640px;
+  /* height: 360px;
+  width: 640px; */
+  height: 100%;
+  width: 100%;
+}
+
+.menu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 .video {
