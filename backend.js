@@ -69,42 +69,7 @@ app.get("/videofeed", (req, res) => {
 app.get("/css", (req, res) => {
   res.sendFile(__dirname + "/stylexls.css");
 });
-app.get("/start", (req, res) => {
-  res.sendFile(__dirname + "/chunu.mp4");
-});
-app.get("/a", (req, res) => {
-  res.sendFile(__dirname + "/A10.mp4");
-});
-app.get("/b", (req, res) => {
-  res.sendFile(__dirname + "/B20.mp4");
-});
-app.get("/C", (req, res) => {
-  res.sendFile(__dirname + "/C10.mp4");
-});
-app.get("/x", (req, res) => {
-  res.sendFile(__dirname + "/E1.mp4");
-});
-app.get("/y", (req, res) => {
-  res.sendFile(__dirname + "/E2.mp4");
-});
-app.get("/z", (req, res) => {
-  res.sendFile(__dirname + "/E3.mp4");
-});
-app.get("/p", (req, res) => {
-  res.sendFile(__dirname + "/E4.mp4");
-});
-app.get("/q", (req, res) => {
-  res.sendFile(__dirname + "/E5.mp4");
-});
-app.get("/r", (req, res) => {
-  res.sendFile(__dirname + "/E6.mp4");
-});
-app.get("/s", (req, res) => {
-  res.sendFile(__dirname + "/chunu.mp4");
-});
-app.get("/end", (req, res) => {
-  res.sendFile(__dirname + "/TY.mp4");
-});
+
 app.use(express.static(__dirname + "/videos"));
 // --------------------------------------------------------------------------------------
 //                            END OF HOSTING
