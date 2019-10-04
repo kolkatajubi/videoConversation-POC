@@ -123,15 +123,27 @@ function createButton() {
   console.log("next nodes ....", currentNextNodes);
   console.log("next urls ....", currentNextURLs);
   for (var i in currentNextOptions) {
-    $(".chat").append(
-      "<button id=" +
-        currentNextNodes[0] +
-        " onclick='changeSource(" +
-        0 +
-        ");'>" +
-        currentNextOptions[i] +
-        "</button>"
-    );
+    if (currentNextOptions[i] == "input") {
+      $(".chat").append(
+        "  <input type='text' placeholder=" +
+          currentNextOptions[i] +
+          " > <button id=" +
+          currentNextNodes[0] +
+          " onclick='changeSource(" +
+          0 +
+          ");'>Send </button>"
+      );
+    } else {
+      $(".chat").append(
+        "<button id=" +
+          currentNextNodes[0] +
+          " onclick='changeSource(" +
+          0 +
+          ");'>" +
+          currentNextOptions[i] +
+          "</button>"
+      );
+    }
   }
   console.log(currentNextNodes);
   console.log(currentNextOptions);
