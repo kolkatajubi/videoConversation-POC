@@ -4,6 +4,7 @@ var urlMapData;
 var videoID = "start";
 var currentNextNodes = [];
 var currentNextURLs = [];
+var currentNextOptions = [];
 var status = 0;
 var fullscreen = 0;
 
@@ -118,27 +119,32 @@ function createButton() {
   // var id = $(this).attr("id");
   console.log("Video ID : ", videoID);
   getURLs(videoID);
+
   console.log("next nodes ....", currentNextNodes);
   console.log("next urls ....", currentNextURLs);
-  for (var i in currentNextNodes) {
+  for (var i in currentNextOptions) {
     $(".chat").append(
       "<button id=" +
-        currentNextNodes[i] +
+        currentNextNodes[0] +
         " onclick='changeSource(" +
-        i +
+        0 +
         ");'>" +
-        currentNextNodes[i] +
+        currentNextOptions[i] +
         "</button>"
     );
   }
+  console.log(currentNextNodes);
+  console.log(currentNextOptions);
 }
 
 function getURLs(current) {
   console.log("getURLs called...");
   currentNextNodes = [];
+  currentNextOptions = [];
   for (i in nextMapData) {
     if (nextMapData[i].Current === current) {
       currentNextNodes = nextMapData[i].Next.split(",");
+      currentNextOptions = nextMapData[i].Options.split(",");
       for (t in currentNextNodes) {
         currentNextNodes[t] = currentNextNodes[t].trim();
       }
