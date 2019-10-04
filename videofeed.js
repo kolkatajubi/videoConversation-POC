@@ -40,15 +40,44 @@ $(document).ready(() => {
 })();
 
 function playPause() {
-  if (fullscreen == 0) {
-    document.body.requestFullscreen();
-    fullscreen = 1;
-  }
-  $(".display")
-    .width("100%")
-    .height("100%");
+  // FS();
+  // $(".display")
+  //   .width("100%")
+  //   .height("100%");
   if (myVideo.paused) myVideo.play();
   else myVideo.pause();
+}
+
+function FS() {
+  if (fullscreen == 0) {
+    if (document.getElementsByClassName("display").requestFullscreen)
+      document.getElementsByClassName("display").requestFullscreen();
+    // else if (document.body.mozRequestFullScreen)
+    //   document.body.mozrequestFullscreen();
+    // else if (document.body.webkitRequestFullscreen)
+    //   document.body.webkitRequestFullscreen();
+    // else if (document.body.msRequestFullscreen)
+    //   document.body.msRequestFullscreen();
+    fullscreen = 1;
+  }
+}
+
+function exitFS() {
+  if (fullscreen == 1) {
+    if (document.getElementsByClassName("display").exitFullscreen)
+      document.getElementsByClassName("display").exitFullscreen();
+    // else if (document.body.mozCancelFullScreen)
+    //   document.body.mozCancelFullScreen();
+    // else if (document.body.webkitExitFullscreen)
+    //   document.body.webkitExitFullscreen();
+    // else if (document.body.msExitFullscreen) document.body.msExitFullscreen();
+    fullscreen = 0;
+  }
+}
+
+function toggleFS() {
+  if (fullscreen == 0) FS();
+  else exitFS();
 }
 
 function createButton() {
