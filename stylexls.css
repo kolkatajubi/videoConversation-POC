@@ -23,7 +23,7 @@ body {
 
 #playImg {
   position: absolute;
-  height: 32%;
+  /* height: 32%; */
   width: 18%;
   z-index: 1;
   top: 50%;

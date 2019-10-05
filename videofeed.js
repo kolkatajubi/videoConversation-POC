@@ -115,8 +115,6 @@ function toggleFS() {
 
 function createButton() {
   console.log("create button called...");
-  // videoID = $("video#myVideo source").attr("id");
-  // var id = $(this).attr("id");
   console.log("Video ID : ", videoID);
   getURLs(videoID);
 
