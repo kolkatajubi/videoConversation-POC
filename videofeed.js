@@ -117,7 +117,6 @@ function createButton() {
   console.log("create button called...");
   console.log("Video ID : ", videoID);
   getURLs(videoID);
-
   console.log("next nodes ....", currentNextNodes);
   console.log("next urls ....", currentNextURLs);
   for (var i in currentNextOptions) {
