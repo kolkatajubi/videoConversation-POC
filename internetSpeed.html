@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script type="text/javascript" language="Javascript">
+      setInterval(() => {
+        var imageAddr = "C:/Users/sanje/Desktop/videoTesting/thumbnail.jpg";
+        var startTime, endTime;
+        var downloadSize = 151337 * 10;
+        var download = new Image();
+        for (var i = 1; i <= 10; i++) {
+          download.onload = function() {
+            endTime = new Date().getTime();
+            showResults();
+          };
+        }
+        startTime = new Date().getTime();
+        download.src = imageAddr;
+        function showResults() {
+          var duration = endTime - startTime;
+          console.log("Duration : ", duration);
+          var bitsLoaded = downloadSize / 1024;
+          console.log("Size (KB) : ", bitsLoaded);
+          var speedBps = Math.round(bitsLoaded / duration);
+          console.log("Speed (Kbps) : ", speedBps);
+          document.getElementById("text").innerHTML = speedBps;
+        }
+      }, 1000);
+    </script>
+    <script>
+      setInterval(() => {
+        var connection =
+          navigator.connection ||
+          navigator.mozConnection ||
+          navigator.webkitConnection;
+
+        // Check for browser support
+        if (!!connection) {
+          // Get the connection type
+          var type = connection.type;
+
+          // Get the connection speed in megabits per second (Mbps)
+          var speed = connection.downlinkMax || connection.bandwidth;
+          console.log("Speed (mbps) : ", speed);
+          document.getElementById("test").innerHTML = speed;
+        }
+      }, 1000);
+    </script>
+  </head>
+  <body>
+    <h3 id="text"></h3>
+    <h3 id="test"></h3>
+  </body>
+</html>
