@@ -61,7 +61,7 @@ app.get("/playImg", (req, res) => {
   res.sendFile(__dirname + "/play.png");
 });
 app.get("/videofeed", (req, res) => {
-  res.sendFile(__dirname + "/videofeed.js");
+  res.sendFile(__dirname + "/base64Driver.js");
 });
 app.get("/css", (req, res) => {
   res.sendFile(__dirname + "/stylexls.css");
